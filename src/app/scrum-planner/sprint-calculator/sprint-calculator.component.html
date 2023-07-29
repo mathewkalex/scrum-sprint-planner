@@ -1,0 +1,10 @@
+<form autocomplete="off" class="h-100" *ngIf="sprintForm" [formGroup]="sprintForm">
+    <h1>Sprint Calculator</h1>
+    <mat-form-field appearance="fill" style="width:100%">
+        <input matInput type="number" placeholder="Sprint Point" formControlName="sprint_point" required />
+    </mat-form-field>
+    <div class="my-8">
+        <button mat-raised-button style="width: 100%;" (click)="autoSelect()">Auto Select Stories</button>
+    </div>
+    <app-stories-point [deleteOption]="true"></app-stories-point>
+</form>

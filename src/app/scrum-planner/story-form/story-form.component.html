@@ -1,0 +1,13 @@
+<form *ngIf="storyForm" [formGroup]="storyForm" autocomplete="off" (ngSubmit)="addStory()">
+    <h1>Add Story</h1>
+    <mat-form-field appearance="fill" style="width:100%">
+        <input matInput type="text" placeholder="Story Name" formControlName="story_name" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill" style="width:100%">
+        <input matInput type="number" placeholder="Story Point" formControlName="story_point" required />
+    </mat-form-field>
+    <div>
+        <button mat-raised-button [disabled]="storyForm.invalid" class="w-100">Add Story</button>
+    </div>
+</form>
+

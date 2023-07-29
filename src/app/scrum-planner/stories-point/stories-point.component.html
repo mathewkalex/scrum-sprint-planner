@@ -1,0 +1,26 @@
+<h1>Story List</h1>
+<table style="width: 100%;" class="mt-32">
+    <th *ngIf="deleteOption" style="width: 100px;"></th>
+    <th>Story Name</th>
+    <th>Story Point</th>
+    <ng-container *ngFor="let story of stories; index as i">
+        <tr>
+            <td *ngIf="deleteOption"><mat-checkbox (change)="updateDelete(i)"></mat-checkbox></td>
+            <td>{{story?.story_name}}</td>
+            <td>{{story?.story_point}}</td>
+        </tr>
+    </ng-container>
+    <tr *ngIf="!stories.length" style="border:none">
+        <td [attr.colspan]="deleteOption ? '3':'2'">No Stories</td>
+    </tr>
+</table>
+<ng-container *ngIf="deleteOption">
+    <div>
+        <div>
+            <button mat-raised-button (click)="clearAllStories()" class="w-100 my-8">Clear Stories</button>
+        </div>
+        <div>
+            <button mat-raised-button (click)="selectedStoriesClear()" class="w-100 my-8">Clear Selected Stories</button>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,7 @@
+
+<h1>Auto Selected Sprint</h1>
+<mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of autoSelectedStories">
+        <div matListItemTitle>Name: {{item?.story_name}} Point: {{item?.story_point}}</div>
+    </mat-list-item>
+</mat-list>

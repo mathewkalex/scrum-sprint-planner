@@ -1,0 +1,14 @@
+<div style="height: 100vh;overflow: hidden;width: 100%;">
+  <div style="margin-left: 64px;margin-right: 64px;">
+  <div class="my-32">
+    <nav style="display: flex;justify-content: space-between;">
+      <a [routerLink]="['']">List</a> 
+      <a [routerLink]="['add-story']">Add Story</a> 
+      <a [routerLink]="['sprint-calculator']">Sprint Calculator</a>
+    </nav>
+  </div>
+  <div style="height: 100%;width: 100%;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
